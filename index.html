@@ -1,104 +1,127 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>屏幕检测专家 - 专业的在线屏幕质量检测工具 | ET出品</title>
+    <title>Display Diagnostic Suite - Professional Online Screen Quality Testing | By ET</title>
     <meta name="description"
-        content="屏幕检测专家是一款免费的在线屏幕质量检测工具,支持坏点检测、漏光测试、色彩检测、对比度测试等8种专业检测模式。由ET开发,帮助您快速发现屏幕问题,适用于新机验收、二手交易等场景。">
-    <meta name="keywords" content="屏幕检测,坏点检测,漏光测试,屏幕测试工具,显示器检测,LCD测试,OLED测试,ET">
+        content="Display Diagnostic Suite is a professional web-based screen quality tool with 8 diagnostic modes for dead pixels, light leakage, contrast, grayscale, and color performance.">
+    <meta name="keywords"
+        content="display diagnostics, dead pixel test, light leakage test, monitor test, LCD test, OLED test, ET">
     <meta name="author" content="ET">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="屏幕检测专家 - 专业的在线屏幕质量检测工具">
-    <meta property="og:description" content="免费在线屏幕检测工具，支持纯色、漏光、对比度、色阶等8种测试模式。">
+    <meta property="og:title" content="Display Diagnostic Suite - Professional Online Screen Quality Testing">
+    <meta property="og:description" content="A professional web-based display testing suite with 8 diagnostic modes.">
     <meta property="og:url" content="https://astrbot.cc/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="屏幕检测专家 - 专业的在线屏幕质量检测工具">
-    <meta name="twitter:description" content="免费在线屏幕检测工具，支持8种专业测试模式。">
+    <meta name="twitter:title" content="Display Diagnostic Suite - Professional Online Screen Quality Testing">
+    <meta name="twitter:description" content="Professional display diagnostics with 8 web-based test modes.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
         <header>
-            <h1>屏幕检测专家</h1>
-            <p class="subtitle">专业的在线屏幕质量检测工具，支持多种检测模式</p>
+            <h1 data-i18n="home.title">Display Diagnostic Suite</h1>
+            <p class="subtitle" data-i18n="home.subtitle">Professional web-based diagnostics for display quality,
+                uniformity, sharpness, and color fidelity.</p>
+            <div class="language-switch" role="group" aria-label="Language selection">
+                <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                <button type="button" class="lang-btn" data-lang="zh">中文</button>
+            </div>
         </header>
 
-        <main class="test-grid" aria-label="屏幕检测模式列表">
-            <button class="test-card" type="button" data-test="solidColor" aria-label="开始纯色测试">
+        <main class="test-grid" data-i18n-attr="aria-label:home.grid.aria" aria-label="Display diagnostics mode list">
+            <button class="test-card" type="button" data-test="solidColor"
+                data-i18n-attr="aria-label:home.card.solid.aria" aria-label="Start solid color uniformity test">
                 <div class="card-icon">🎨</div>
                 <div class="card-content">
-                    <h3>纯色测试</h3>
-                    <p>检测屏幕坏点、亮点和暗点，支持黑、白、红、绿、蓝等多种颜色</p>
+                    <h3 data-i18n="home.card.solid.title">Solid Color Uniformity</h3>
+                    <p data-i18n="home.card.solid.desc">Detect dead, stuck, or dim pixels using full-screen black,
+                        white, red, green, blue, and additional color fields.</p>
                 </div>
             </button>
 
-            <button class="test-card" type="button" data-test="lightLeak" aria-label="开始漏光测试">
+            <button class="test-card" type="button" data-test="lightLeak"
+                data-i18n-attr="aria-label:home.card.lightLeak.aria" aria-label="Start light leakage inspection">
                 <div class="card-icon">💡</div>
                 <div class="card-content">
-                    <h3>漏光测试</h3>
-                    <p>在黑色背景下检测屏幕边缘和角落的漏光情况</p>
+                    <h3 data-i18n="home.card.lightLeak.title">Light Leakage Inspection</h3>
+                    <p data-i18n="home.card.lightLeak.desc">Assess edge and corner backlight bleed under a pure black
+                        background in low ambient light.</p>
                 </div>
             </button>
 
-            <button class="test-card" type="button" data-test="interference" aria-label="开始干扰测试">
+            <button class="test-card" type="button" data-test="interference"
+                data-i18n-attr="aria-label:home.card.interference.aria"
+                aria-label="Start interference pattern analysis">
                 <div class="card-icon">📊</div>
                 <div class="card-content">
-                    <h3>干扰测试</h3>
-                    <p>通过网格和条纹图案检测屏幕的像素排列和干扰问题</p>
+                    <h3 data-i18n="home.card.interference.title">Interference Pattern Analysis</h3>
+                    <p data-i18n="home.card.interference.desc">Reveal moire artifacts, distortion, and pixel matrix
+                        irregularities with stripe and grid patterns.</p>
                 </div>
             </button>
 
-            <button class="test-card" type="button" data-test="focus" aria-label="开始对焦测试">
+            <button class="test-card" type="button" data-test="focus" data-i18n-attr="aria-label:home.card.focus.aria"
+                aria-label="Start focus and sharpness calibration">
                 <div class="card-icon">🎯</div>
                 <div class="card-content">
-                    <h3>对焦测试</h3>
-                    <p>检测屏幕的清晰度和锐度，确保显示内容清晰</p>
+                    <h3 data-i18n="home.card.focus.title">Focus & Sharpness Calibration</h3>
+                    <p data-i18n="home.card.focus.desc">Verify center-to-corner clarity, line precision, and text
+                        sharpness across the panel.</p>
                 </div>
             </button>
 
-            <button class="test-card" type="button" data-test="breathing" aria-label="开始呼吸效应测试">
+            <button class="test-card" type="button" data-test="breathing"
+                data-i18n-attr="aria-label:home.card.breathing.aria" aria-label="Start luminance breathing check">
                 <div class="card-icon">🌊</div>
                 <div class="card-content">
-                    <h3>呼吸效应</h3>
-                    <p>检测屏幕亮度变化是否均匀，是否存在闪烁问题</p>
+                    <h3 data-i18n="home.card.breathing.title">Luminance Breathing Check</h3>
+                    <p data-i18n="home.card.breathing.desc">Evaluate smoothness and uniformity of brightness transitions
+                        to identify flicker or instability.</p>
                 </div>
             </button>
 
-            <button class="test-card" type="button" data-test="contrast" aria-label="开始对比度测试">
+            <button class="test-card" type="button" data-test="contrast"
+                data-i18n-attr="aria-label:home.card.contrast.aria" aria-label="Start contrast legibility test">
                 <div class="card-icon">⚫⚪</div>
                 <div class="card-content">
-                    <h3>对比度测试</h3>
-                    <p>测试屏幕的黑白对比度和灰度层次表现</p>
+                    <h3 data-i18n="home.card.contrast.title">Contrast Legibility</h3>
+                    <p data-i18n="home.card.contrast.desc">Measure black-white separation and readability performance
+                        under high and low contrast text blocks.</p>
                 </div>
             </button>
 
-            <button class="test-card" type="button" data-test="grayscale" aria-label="开始色阶测试">
+            <button class="test-card" type="button" data-test="grayscale"
+                data-i18n-attr="aria-label:home.card.grayscale.aria" aria-label="Start grayscale gradient test">
                 <div class="card-icon">🌈</div>
                 <div class="card-content">
-                    <h3>色阶测试</h3>
-                    <p>检测屏幕的灰阶过渡是否平滑，是否有色带现象</p>
+                    <h3 data-i18n="home.card.grayscale.title">Grayscale Gradient</h3>
+                    <p data-i18n="home.card.grayscale.desc">Check step visibility and tonal smoothness to detect banding
+                        or abrupt gray-level transitions.</p>
                 </div>
             </button>
 
-            <button class="test-card" type="button" data-test="saturation" aria-label="开始饱和度测试">
+            <button class="test-card" type="button" data-test="saturation"
+                data-i18n-attr="aria-label:home.card.saturation.aria" aria-label="Start color saturation ramp test">
                 <div class="card-icon">🎨</div>
                 <div class="card-content">
-                    <h3>饱和度测试</h3>
-                    <p>测试屏幕的色彩饱和度和色彩还原能力</p>
+                    <h3 data-i18n="home.card.saturation.title">Color Saturation Ramp</h3>
+                    <p data-i18n="home.card.saturation.desc">Inspect chroma intensity and color fidelity using
+                        controlled RGB/CMY gradient ramps.</p>
                 </div>
             </button>
         </main>
 
         <footer>
             <div class="footer-links">
-                <a href="about.html">关于</a>
+                <a href="about.html" data-i18n="home.footer.about">About</a>
                 <span class="divider">•</span>
-                <a href="privacy.html">隐私政策</a>
+                <a href="privacy.html" data-i18n="home.footer.privacy">Privacy Policy</a>
             </div>
-            <p class="footer-text">© 2025 屏幕检测专家 | 作者: ET</p>
+            <p class="footer-text" data-i18n="home.footer.copyright">© 2025 Display Diagnostic Suite | Built by ET</p>
         </footer>
     </div>
 
