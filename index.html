@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>屏幕检测专家 - 专业的在线屏幕质量检测工具 | ET出品</title>
-    <meta name="description" content="屏幕检测专家是一款免费的在线屏幕质量检测工具,支持坏点检测、漏光测试、色彩检测、对比度测试等8种专业检测模式。由ET开发,帮助您快速发现屏幕问题,适用于新机验收、二手交易等场景。">
+    <meta name="description"
+        content="屏幕检测专家是一款免费的在线屏幕质量检测工具,支持坏点检测、漏光测试、色彩检测、对比度测试等8种专业检测模式。由ET开发,帮助您快速发现屏幕问题,适用于新机验收、二手交易等场景。">
     <meta name="keywords" content="屏幕检测,坏点检测,漏光测试,屏幕测试工具,显示器检测,LCD测试,OLED测试,ET">
     <meta name="author" content="ET">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="屏幕检测专家 - 专业的在线屏幕质量检测工具">
+    <meta property="og:description" content="免费在线屏幕检测工具，支持纯色、漏光、对比度、色阶等8种测试模式。">
+    <meta property="og:url" content="https://astrbot.cc/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="屏幕检测专家 - 专业的在线屏幕质量检测工具">
+    <meta name="twitter:description" content="免费在线屏幕检测工具，支持8种专业测试模式。">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -16,70 +26,70 @@
             <p class="subtitle">专业的在线屏幕质量检测工具，支持多种检测模式</p>
         </header>
 
-        <main class="test-grid">
-            <div class="test-card" onclick="startTest('solidColor')">
+        <main class="test-grid" aria-label="屏幕检测模式列表">
+            <button class="test-card" type="button" data-test="solidColor" aria-label="开始纯色测试">
                 <div class="card-icon">🎨</div>
                 <div class="card-content">
                     <h3>纯色测试</h3>
                     <p>检测屏幕坏点、亮点和暗点，支持黑、白、红、绿、蓝等多种颜色</p>
                 </div>
-            </div>
+            </button>
 
-            <div class="test-card" onclick="startTest('lightLeak')">
+            <button class="test-card" type="button" data-test="lightLeak" aria-label="开始漏光测试">
                 <div class="card-icon">💡</div>
                 <div class="card-content">
                     <h3>漏光测试</h3>
                     <p>在黑色背景下检测屏幕边缘和角落的漏光情况</p>
                 </div>
-            </div>
+            </button>
 
-            <div class="test-card" onclick="startTest('interference')">
+            <button class="test-card" type="button" data-test="interference" aria-label="开始干扰测试">
                 <div class="card-icon">📊</div>
                 <div class="card-content">
                     <h3>干扰测试</h3>
                     <p>通过网格和条纹图案检测屏幕的像素排列和干扰问题</p>
                 </div>
-            </div>
+            </button>
 
-            <div class="test-card" onclick="startTest('focus')">
+            <button class="test-card" type="button" data-test="focus" aria-label="开始对焦测试">
                 <div class="card-icon">🎯</div>
                 <div class="card-content">
                     <h3>对焦测试</h3>
                     <p>检测屏幕的清晰度和锐度，确保显示内容清晰</p>
                 </div>
-            </div>
+            </button>
 
-            <div class="test-card" onclick="startTest('breathing')">
+            <button class="test-card" type="button" data-test="breathing" aria-label="开始呼吸效应测试">
                 <div class="card-icon">🌊</div>
                 <div class="card-content">
                     <h3>呼吸效应</h3>
                     <p>检测屏幕亮度变化是否均匀，是否存在闪烁问题</p>
                 </div>
-            </div>
+            </button>
 
-            <div class="test-card" onclick="startTest('contrast')">
+            <button class="test-card" type="button" data-test="contrast" aria-label="开始对比度测试">
                 <div class="card-icon">⚫⚪</div>
                 <div class="card-content">
                     <h3>对比度测试</h3>
                     <p>测试屏幕的黑白对比度和灰度层次表现</p>
                 </div>
-            </div>
+            </button>
 
-            <div class="test-card" onclick="startTest('grayscale')">
+            <button class="test-card" type="button" data-test="grayscale" aria-label="开始色阶测试">
                 <div class="card-icon">🌈</div>
                 <div class="card-content">
                     <h3>色阶测试</h3>
                     <p>检测屏幕的灰阶过渡是否平滑，是否有色带现象</p>
                 </div>
-            </div>
+            </button>
 
-            <div class="test-card" onclick="startTest('saturation')">
+            <button class="test-card" type="button" data-test="saturation" aria-label="开始饱和度测试">
                 <div class="card-icon">🎨</div>
                 <div class="card-content">
                     <h3>饱和度测试</h3>
                     <p>测试屏幕的色彩饱和度和色彩还原能力</p>
                 </div>
-            </div>
+            </button>
         </main>
 
         <footer>
@@ -97,4 +107,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

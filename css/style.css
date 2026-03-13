@@ -89,6 +89,10 @@ header .subtitle {
     flex-direction: column;
     position: relative;
     box-shadow: var(--shadow-sm);
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    font: inherit;
 }
 
 .test-card:hover {
@@ -99,6 +103,11 @@ header .subtitle {
 .test-card:active {
     transform: translateY(0);
     box-shadow: var(--shadow-sm);
+}
+
+.test-card:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .test-card::before {
@@ -197,6 +206,11 @@ header .subtitle {
     transform: scale(0.98);
 }
 
+.controls button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 .controls .close-btn {
     background: #ea4335;
 }
@@ -253,6 +267,7 @@ footer {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -264,6 +279,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -275,6 +291,7 @@ footer {
         opacity: 0;
         transform: translate(-50%, -10px);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, 0);
@@ -286,6 +303,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -293,14 +311,26 @@ footer {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* 呼吸效果 */
 @keyframes breathe {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 /* 响应式设计 */
@@ -331,6 +361,15 @@ footer {
     .controls button {
         font-size: 0.75rem;
         padding: 6px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
